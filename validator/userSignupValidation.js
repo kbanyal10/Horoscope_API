@@ -8,7 +8,15 @@ exports.userSignupValidator = (req, res, next) => {
         error: 'User with that email already exists',
       });
     }
+
+    if(err){
+      return res.status(422).json({
+        error: 'User data was not be able to process right',
+      });
+    }
   });
+
+
 
   req.check('name', 'Name is required').notEmpty();
   req
