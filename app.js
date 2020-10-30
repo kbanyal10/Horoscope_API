@@ -5,8 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 var horoscopeRouter = require('./routes/horoscopeRouter');
 var mongoose = require('mongoose');
+const expressValidator = require('express-validator');
 require('dotenv').config();
 
 
@@ -26,8 +29,10 @@ mongoose
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(morgan('dev'));
+app.use(bodyParser.json());
 app.use(logger('dev'));
-// app.use(morgan('dev'));
+app.use(expressValidator());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
