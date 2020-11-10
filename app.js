@@ -3,14 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+require('dotenv').config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var addAdminDataRoute = require('./routes/addAdminDataRoute');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 var horoscopeRouter = require('./routes/horoscopeRouter');
 var mongoose = require('mongoose');
 const expressValidator = require('express-validator');
-require('dotenv').config();
+
 
 
 
@@ -22,7 +24,7 @@ mongoose
     useCreateIndex: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('connected'));
+  .then(() => console.log('connected on port 3000' ));
 
 
 // view engine setup
@@ -41,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/horoscope', horoscopeRouter);
+app.use('/horoscope/admin', addAdminDataRoute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
