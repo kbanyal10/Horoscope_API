@@ -42,8 +42,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/horoscope', horoscopeRouter);
+app.use('/horoscope/', horoscopeRouter);
 app.use('/horoscope/admin', addAdminDataRoute);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
