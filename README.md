@@ -67,7 +67,7 @@ Role can be inly added from backend!
 
 }
 
-## Get a specific Thing
+## Signin After signup
 
 ### Request
 
