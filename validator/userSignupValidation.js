@@ -9,14 +9,12 @@ exports.userSignupValidator = (req, res, next) => {
       });
     }
 
-    if(err){
+    if (err) {
       return res.status(422).json({
         error: 'User data was not be able to process right',
       });
     }
   });
-
-
 
   req.check('name', 'Name is required').notEmpty();
   req

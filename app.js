@@ -13,9 +13,6 @@ var horoscopeRouter = require('./routes/horoscopeRouter');
 var mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 
-
-
-
 var app = express();
 
 mongoose
@@ -24,8 +21,7 @@ mongoose
     useCreateIndex: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('connected on port 3000' ));
-
+  .then(() => console.log('connected on port 3000'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,14 +41,13 @@ app.use('/users', usersRouter);
 app.use('/horoscope/', horoscopeRouter);
 app.use('/horoscope/admin', addAdminDataRoute);
 
-
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
