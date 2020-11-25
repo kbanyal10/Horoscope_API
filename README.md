@@ -4,7 +4,7 @@ This is a horoscope-API which provides user with horoscope readings if they are 
 
 The entire application is made on MERN stack.
 
-`.env` file must be create accordingly which should have DATABASE_STRING and JWT_SECRET = Any string value.
+`.env` file must be created accordingly which should have DATABASE_STRING and JWT_SECRET = Any string value.
 
 Please use `POSTMAN` for backend testing.
 
