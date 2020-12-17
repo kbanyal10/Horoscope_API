@@ -13,6 +13,7 @@ var horoscopeRouter = require('./routes/horoscopeRouter');
 var mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 
+
 var app = express();
 
 mongoose

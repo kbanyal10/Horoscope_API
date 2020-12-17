@@ -10,7 +10,7 @@ function App() {
   return (
     
     <Router>
-      <div className="App" class="jumbotron text-center">
+      <div className="App" class="jumbotron text-center mybackpage">
      
         <main>
           <Switch>
@@ -28,7 +28,7 @@ function App() {
                 <div class="row">
                   <div>
                     <h2>Daily Horoscope <span class="glyphicon glyphicon-globe logo slideanim"></span></h2><br/><br/><br/>
-                    <img src="https://www.horoscope.com/wp-content/uploads/sites/2/2020/04/zodiac-sign-symbols.png" alt="Zodiac Signs"/><br/><br/><br/><br/>
+                    <img class="myimage" src="https://www.horoscope.com/wp-content/uploads/sites/2/2020/04/zodiac-sign-symbols.png" alt="Zodiac Signs"/><br/><br/><br/><br/>
                     <h4><strong>MISSION:</strong> Our mission is to provide people with their horoscope, anyone can signup and use our website or API to get data on the preferred zodia sign.</h4><br/>
                     </div>
                 </div>

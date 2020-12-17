@@ -21,11 +21,12 @@ const SelectedHoroscope = () => {
     console.table(details.photo)
 
     return (
-        <div class="jumbotron">
+        <div class="jumbotron mybackpage">
             Zodiac Sign: <h3>{captitalizedName}</h3>
-            <br/><br/><br/><br/><br/><br/>  
-            <p>Name: {details.name}</p>
-            <p>Description: {details.description}</p>
+            <br/><br/><br/><br/><br/><br/> 
+            <div class="container myhoroscopedetails">
+            <p><b>Name:</b> {details.name}</p>
+            <p><b>Description:</b> {details.description}</p></div> 
             {/* <img src={`data:image/png;base64,${b64}`} /> */}
             
         </div>
