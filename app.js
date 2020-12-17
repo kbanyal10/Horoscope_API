@@ -38,23 +38,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-<<<<<<< HEAD
 app.use('/horoscope', horoscopeRouter);
-=======
-app.use('/horoscope/', horoscopeRouter);
->>>>>>> 4bcc602450adfc7b85c6c89d189f030c9e7a2962
 app.use('/horoscope/admin', addAdminDataRoute);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-<<<<<<< HEAD
   res.header('Access-Control-Allow-Origin', "*");
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
-=======
-  next(createError(404));
->>>>>>> 4bcc602450adfc7b85c6c89d189f030c9e7a2962
 });
 
 // error handler

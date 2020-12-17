@@ -8,10 +8,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
-<<<<<<< HEAD
     "cors": "^2.8.5",
-=======
->>>>>>> 4bcc602450adfc7b85c6c89d189f030c9e7a2962
     "crypto-js": "^4.0.0",
     "debug": "~2.6.9",
     "dotenv": "^8.2.0",
@@ -22,10 +19,7 @@
     "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-<<<<<<< HEAD
     "json-web-token": "^3.2.0",
-=======
->>>>>>> 4bcc602450adfc7b85c6c89d189f030c9e7a2962
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.11",

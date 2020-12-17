@@ -1,14 +1,10 @@
 # REST API example application
 
-This is a horoscope-API which provides user with horoscope readings if they are logged in.
+This is a horoscope-API which provides user with horoscope readings..
 
 The entire application is made on MERN stack.
 
-<<<<<<< HEAD
 `.env` file must be create accordingly which should have DATABASE_STRING and JWT_SECRET = Any string value.
-=======
-`.env` file must be created accordingly which should have DATABASE_STRING and JWT_SECRET = Any string value.
->>>>>>> 4bcc602450adfc7b85c6c89d189f030c9e7a2962
 
 Please use `POSTMAN` for backend testing.
 
