@@ -5,14 +5,11 @@ const { Usersignin } = require('../controllers/userController');
 var router = express.Router();
 const { userById } = require('../controllers/userController');
 const { userSigninRequired } = require('../controllers/userController');
-
-/* GET users listing. */
-// router.get('/', function (req, res, next) {
-//   res.send('respond with a resource');
-// });
+const { signout } = require('../controllers/userController');
 
 router.post('/signup', userSignupValidator, userSignup);
 router.post('/signin', Usersignin);
+router.get('/signout', signout);
 router.post('/secret/:userId', userSigninRequired, (req, res) => {
   res.json({
     user: req.profile,
